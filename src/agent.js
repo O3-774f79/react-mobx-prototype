@@ -8,7 +8,6 @@ const superagent = superagentPromise(_superagent, global.Promise);
 const API_ROOT = 'https://conduit.productionready.io/api';
 
 const encode = encodeURIComponent;
-//Hello World
 const handleErrors = err => {
   if (err && err.response && err.response.status === 401) {
     authStore.logout();

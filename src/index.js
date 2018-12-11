@@ -14,6 +14,7 @@ import commonStore from './stores/commonStore';
 import editorStore from './stores/editorStore';
 import userStore from './stores/userStore';
 import profileStore from './stores/profileStore';
+import login from './stores/login'
 
 const stores = {
   articlesStore,
@@ -23,6 +24,7 @@ const stores = {
   editorStore,
   userStore,
   profileStore,
+  login
 };
 
 // For easier debugging

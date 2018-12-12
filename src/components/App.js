@@ -4,7 +4,7 @@ import { Switch, Route, withRouter } from 'react-router-dom';
 import { inject, observer } from 'mobx-react';
 import PrivateRoute from './PrivateRoute';
 
-import Article from './Article';
+// import Article from './Article';
 import Editor from './Editor';
 import Home from './Home';
 import Login from '../page/login/index.js';
@@ -13,6 +13,7 @@ import Register from './Register';
 import Settings from './Settings';
 import NotMatch from './NotMatch'
 
+import Dashbord from '../components/Layout/Dashbord'
 @inject('userStore', 'commonStore')
 @withRouter
 @observer
@@ -36,17 +37,17 @@ export default class App extends React.Component {
       return (
         <div>
           {/* <Header /> */}
-          <Switch>
+          <Dashbord />
+          {/* <Switch>
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
             <Route path="/editor/:slug?" component={Editor} />
-            <Route path="/article/:id" component={Article} />
             <PrivateRoute path="/settings" component={Settings} />
             <Route path="/@:username" component={Profile} />
             <Route path="/@:username/favorites" component={Profile} />
             <Route path="/" component={Home} />
             <Route component={NotMatch} />
-          </Switch>
+          </Switch> */}
         </div>
       );
     }

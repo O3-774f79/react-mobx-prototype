@@ -7,7 +7,7 @@ import PrivateRoute from './PrivateRoute';
 import Article from './Article';
 import Editor from './Editor';
 import Home from './Home';
-import Login from './Login';
+import Login from '../page/login/index.js';
 import Profile from './Profile';
 import Register from './Register';
 import Settings from './Settings';
@@ -35,7 +35,7 @@ export default class App extends React.Component {
     if (this.props.commonStore.appLoaded) {
       return (
         <div>
-          <Header />
+          {/* <Header /> */}
           <Switch>
             <Route path="/login" component={Login} />
             <Route path="/register" component={Register} />
